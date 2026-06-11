@@ -1,0 +1,146 @@
+PORTFOLIO — 1 WEEK PLAN
+Camila Rojas | Full-Stack + ML/AI | Mila Quebec AI Institute
+Stack: Next.js 16, Tailwind v4, Framer Motion, TypeScript
+====================================================================
+
+GOAL: A polished, deployed portfolio that stands out by including
+a live, interactive ML demo running in the browser — something
+almost no portfolio has. Given your ML/NLP background, this is
+the differentiator.
+
+====================================================================
+DAY 1 — May 21 (Thu) | DESIGN FOUNDATION
+====================================================================
+[ ] Decide on a color palette + typography (pick 2 fonts max)
+[ ] Replace placeholder metadata in app/layout.tsx
+    - title, description, Open Graph tags
+[ ] Set up global CSS variables (colors, spacing) in globals.css
+[ ] Create a /components folder structure:
+    components/
+      ui/         <- reusable primitives (Button, Badge, etc.)
+      sections/   <- Hero, About, Projects, Contact, Demo
+[ ] Swap out the default page.tsx scaffold with a blank canvas
+
+====================================================================
+DAY 2 — May 22 (Fri) | HERO + NAVBAR
+====================================================================
+[ ] Build Navbar component
+    - Your name/logo on the left
+    - Nav links (About, Projects, Demo, Contact) on the right
+    - Smooth scroll to sections
+    - Sticky, with a subtle blur backdrop on scroll
+[ ] Build Hero section
+    - Your name, title ("Full-Stack Engineer & AI Researcher")
+    - 1-2 line tagline that mentions Mila + your focus areas
+    - CTA buttons: "See my work" + "Get in touch"
+    - Framer Motion entrance animation (fade + slide up)
+
+====================================================================
+DAY 3 — May 23 (Sat) | ABOUT + PROJECTS
+====================================================================
+[ ] Build About section
+    - Short bio (3-4 sentences: who you are, what you build,
+      where you study, what drives you)
+    - Skills/tech tags: React, Next.js, Node, Python, PyTorch,
+      TensorFlow, OpenCV, Hugging Face, etc.
+    - Optional: a photo
+[ ] Build Projects section
+    - Card grid (2-3 cols on desktop, 1 on mobile)
+    - Each card: project name, short description, tech tags,
+      links (GitHub + live demo if available)
+    - Aim for 3-5 projects — mix of full-stack and ML projects
+    - Hover animation on cards (Framer Motion)
+    - Write out your actual projects and their descriptions
+
+====================================================================
+DAY 4 — May 24 (Sun) | THE UNIQUE FEATURE — LIVE ML DEMO
+====================================================================
+This is what makes your portfolio different. The idea:
+an interactive ML demo that runs entirely in the browser using
+TensorFlow.js — no backend needed, no API calls.
+
+Suggested demo (pick one based on your strongest project area):
+
+  OPTION A — Real-time object detection (CV focus)
+    - Use TensorFlow.js + COCO-SSD or MobileNet
+    - User enables webcam → model detects objects live
+    - Label bounding boxes with confidence scores
+    - Install: npm install @tensorflow/tfjs @tensorflow-models/coco-ssd
+
+  OPTION B — Sentiment analysis (NLP focus)
+    - User types a sentence → model predicts sentiment in real time
+    - Use a small distilled BERT or Universal Sentence Encoder
+    - Visualize confidence scores as animated bars
+    - Install: npm install @tensorflow/tfjs @tensorflow-models/universal-sentence-encoder
+
+  OPTION C — Neural network visualizer (general AI)
+    - Animated, interactive diagram of a neural network
+    - Inputs flow through layers with animated "activations"
+    - No model needed — pure canvas/SVG animation
+    - Works great with Framer Motion
+
+[ ] Pick your option and install required packages
+[ ] Build the Demo section with a brief explanation of what it does
+[ ] Add loading state while model initializes
+[ ] Make it mobile-friendly (graceful fallback if no webcam)
+
+====================================================================
+DAY 5 — May 25 (Mon) | CONTACT + FOOTER
+====================================================================
+[ ] Build Contact section
+    - Email link (mailto:)
+    - Social links: GitHub, LinkedIn, optionally Twitter/X
+    - Optional: a simple contact form
+      (use a free service like Resend, Formspree, or EmailJS)
+[ ] Build Footer
+    - Your name + year
+    - "Built with Next.js & Tailwind" (optional)
+[ ] Add smooth scroll behavior between all sections
+
+====================================================================
+DAY 6 — May 26 (Tue) | POLISH + ACCESSIBILITY
+====================================================================
+[ ] Review on mobile (375px), tablet (768px), desktop (1280px)
+[ ] Check dark mode — add a toggle if you want it
+[ ] Add page-level Framer Motion animations:
+    - Sections fade in as they enter the viewport (useInView)
+    - Staggered animations on project cards
+[ ] Accessibility pass:
+    - All images have alt text
+    - Color contrast passes WCAG AA
+    - Keyboard navigable
+[ ] Run: npm run build — fix any TypeScript or lint errors
+[ ] Update page metadata (title, OG image, favicon)
+
+====================================================================
+DAY 7 — May 27 (Wed) | DEPLOY + DONE
+====================================================================
+[ ] Push final code to GitHub
+[ ] Deploy to Cloudflare (free tier, connects to GitHub automatically)
+    - cloudflare.pages → Import project → select cami-portfolio
+[ ] Set up a custom domain if you have one, get a free one form cloudflare
+[ ] Test the live URL on mobile + desktop
+[ ] Share it!
+
+====================================================================
+NICE TO HAVE (if you finish early)
+====================================================================
+[ ] Blog section — write 1-2 short posts about ML projects
+[ ] Resume PDF download button in the Hero or About section
+[ ] GitHub activity graph (use github-readme-stats as an <img>)
+[ ] Animated cursor or subtle particle background in Hero
+[ ] "Currently learning / building" live badge
+
+====================================================================
+CONTENT YOU NEED TO PREPARE (not code — just writing)
+====================================================================
+[ ] Your bio (3-4 sentences)
+
+    I am a Co-op CS student at Concordia Unviersity. I love how impactful can ML, DL can be, 
+    and still growing my knowledge about them and be able to apply them. I grew up in Peru and left home at 16 to finish Hi
+
+[ ] List of 3-5 projects with: name, description, tech, links
+[ ] Your tech stack / skills list
+[ ] Links: GitHub URL, LinkedIn URL, email address
+[ ] A photo (optional but recommended)
+====================================================================
